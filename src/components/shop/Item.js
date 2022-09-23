@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Item = (props) => {
+const Item = ({ album, artist }) => {
   return (
     <div>
-      <h1>{props.item}</h1>
+      <h1>{album}</h1>
+      <h2>{artist}</h2>
     </div>
   );
 };
