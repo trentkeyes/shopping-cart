@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+.nav {
+    background-color: #588157;
+    color: #DAD7CD;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__links {
+    display: flex;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+}
+
+.selected {
+    color: black;
+}
