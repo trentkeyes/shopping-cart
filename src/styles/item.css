@@ -1,0 +1,29 @@
+.item__card {
+    max-width: 100%;
+    width: 300px;
+    text-align: center;
+}
+
+.item__img {
+    width: 300px;
+    height: 300px;
+    /* background-image: url('../assets/MagicalMysteryTourDoubleEPcover.jpg'); */
+}
+
+.item__quantity,
+.item__add {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #A3B18A;
+    padding: .25em;
+    border: 1px solid #344E41;
+    text-align: center;
+    width: 3.5em;
+}
+
+.item__add {
+    width: fit-content;
+    padding: .25em .75em;
+    margin-left: 1em;
+}

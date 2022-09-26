@@ -1,0 +1,34 @@
+.shop__selector__flex {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.shop__instructions {
+    font-size: 1.125rem;
+}
+
+.shop__selector {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #A3B18A;
+    padding: .25em;
+    border: 1px solid #344E41;
+    text-align: center;
+    margin: 0 auto 1.5em;
+}
+
+.shop__items__flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+
+.shop__item__quantity {
+    
+}

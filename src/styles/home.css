@@ -1,0 +1,49 @@
+.home__background {
+    min-height: 95vh;
+    background-image: url("../assets/priscilla-du-preez-rhva4q_n8CQ-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__text {
+    min-height: 100%;
+
+}
+
+.hero__title,
+.hero__copy,
+.hero__link {
+    font-size: 1.5rem;
+    text-align: right;
+    margin-top: 0;
+    color: #DAD7CD;
+    background-color: #3a5a40b8;
+    max-width: fit-content;
+    padding: .75em;
+}
+
+.hero__copy {
+    text-align: left;
+    font-size: 1.25rem;
+}
+
+.hero__link {
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.hero__link a {
+    text-decoration: none;
+}
+
+.hero__link a:visited {
+    color: #DAD7CD;
+}
+
+.hero__link a:hover {
+    color: #dad7cd90;
+}
