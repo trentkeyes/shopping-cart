@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../styles/item.css';
 import img from '../../assets/MagicalMysteryTourDoubleEPcover.jpg';
 
-const Item = ({ album, artist, quantity }) => {
+const Item = ({ album, artist, id, addItem }) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleChange = (e) => setQuantity(e.target.value);
+
   return (
     <div className="item__card">
       <div className="item__img">
@@ -14,12 +18,14 @@ const Item = ({ album, artist, quantity }) => {
         <input
           type="number"
           name="item-quantity"
-          // value={quantity}
-          // onChange={setQuantity}
+          value={quantity}
+          onChange={handleChange}
           id=""
           className="item__quantity"
         ></input>
-        <button className="item__add">Add to Cart</button>
+        <button className="item__add" onClick={() => addItem(id, quantity)}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );
