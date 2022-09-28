@@ -22,6 +22,7 @@
 
 .nav__links {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 1em;
 }
@@ -40,4 +41,22 @@
 
 .selected {
     background-color: #DAD7CD;
+}
+
+.nav__cart {
+    max-width: 30px;
+    cursor: pointer;
+}
+
+.nav__cart-items {
+    font-size: 1.125rem;
+    margin-left: -.5em;
+    font-weight: 600;
+}
+
+.nav__cart-items-background {
+    /* background-color: #DAD7CD;
+    color: black;
+    padding: .25em;
+    border-radius: 100%; */
 }

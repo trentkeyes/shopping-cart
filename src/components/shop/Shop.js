@@ -3,12 +3,24 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { wikiData } from '../../wikiData';
 import Item from './Item';
+import { ShoppingCart } from './ShoppingCart';
 import '../../styles/shop.css';
+import Modal from 'react-modal';
 
-const Shop = () => {
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
+const Shop = ({ addItem, modalIsOpen, closeModal }) => {
   const [items, setItems] = useState(wikiData);
   const [albums, setAlbums] = useState();
-  const [cart, setCart] = useState([]);
 
   // let url =
   //   'https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=List%20of%20Billboard%20200%20number-one%20albums%20of%201968';
@@ -42,12 +54,6 @@ const Shop = () => {
   //     });
   // }, []);
 
-  const addItem = (id, quantity) => {
-    setCart((prev) => {
-      return [...prev, { id: id, quantity: quantity }];
-    });
-  };
-  console.log(cart);
   const itemsElements = items.map((item, index) => {
     return (
       <Item
@@ -62,6 +68,14 @@ const Shop = () => {
 
   return (
     <div className="shop__background">
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <ShoppingCart />
+      </Modal>
       <div className="container">
         <div className="shop__selector__flex">
           <p className="shop__instructions">

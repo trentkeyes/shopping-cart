@@ -5,7 +5,7 @@ import img from '../../assets/MagicalMysteryTourDoubleEPcover.jpg';
 const Item = ({ album, artist, id, addItem }) => {
   const [quantity, setQuantity] = useState(1);
 
-  const handleChange = (e) => setQuantity(e.target.value);
+  const handleChange = (e) => setQuantity(Number(e.target.value));
 
   return (
     <div className="item__card">
@@ -20,7 +20,7 @@ const Item = ({ album, artist, id, addItem }) => {
           name="item-quantity"
           value={quantity}
           onChange={handleChange}
-          id=""
+          min="1"
           className="item__quantity"
         ></input>
         <button className="item__add" onClick={() => addItem(id, quantity)}>

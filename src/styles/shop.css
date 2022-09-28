@@ -24,11 +24,9 @@
 .shop__items__flex {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    gap: 2em;
+    justify-content: space-around;
+    gap: 2.5em;
     margin-bottom: 3em;
 }
 
-.shop__item__quantity {
-    
-}
+.shop__item__quantity {}
