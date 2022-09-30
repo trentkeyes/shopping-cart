@@ -1,9 +1,14 @@
 import React from 'react';
 
-export const ShoppingCart = () => {
+export const ShoppingCart = ({ cartItems }) => {
+  console.log(cartItems);
   return (
     <div>
-      <h1>Shopping Cart Modal</h1>
+      {cartItems.length > 0 ? (
+        <div>{cartItems}</div>
+      ) : (
+        <p>Add something to your cart</p>
+      )}
     </div>
   );
 };

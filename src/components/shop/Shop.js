@@ -18,7 +18,7 @@ const customStyles = {
   },
 };
 
-const Shop = ({ addItem, modalIsOpen, closeModal }) => {
+const Shop = ({ cart, addItem, modalIsOpen, closeModal }) => {
   const [items, setItems] = useState(wikiData);
   const [albums, setAlbums] = useState();
 
@@ -65,6 +65,15 @@ const Shop = ({ addItem, modalIsOpen, closeModal }) => {
       />
     );
   });
+  console.log(cart);
+
+  const cartElements = cart.map((item) => {
+    return (
+      <p>
+        Album {item.id} ({item.quantity})
+      </p>
+    );
+  });
 
   return (
     <div className="shop__background">
@@ -74,7 +83,7 @@ const Shop = ({ addItem, modalIsOpen, closeModal }) => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <ShoppingCart />
+        <ShoppingCart cartItems={cartElements} />
       </Modal>
       <div className="container">
         <div className="shop__selector__flex">
