@@ -18,43 +18,17 @@ const customStyles = {
   },
 };
 
-const Shop = ({ cart, addItem, modalIsOpen, closeModal }) => {
-  const [items, setItems] = useState(wikiData);
-  const [albums, setAlbums] = useState();
-
-  // let url =
-  //   'https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=List%20of%20Billboard%20200%20number-one%20albums%20of%201968';
-
-  // url = '#';
-  // useEffect(() => {
-  //   fetch(url)
-  //     .then(function (response) {
-  //       return response.json();
-  //     })
-  //     .then(function (response) {
-  //       const html_code = response['parse']['text']['*'];
-  //       const parser = new DOMParser();
-  //       const html = parser.parseFromString(html_code, 'text/html');
-  //       const tables = html.querySelectorAll('.wikitable');
-  //       const album = html.querySelectorAll('.wikitable > tbody > tr > td > i');
-  //       const artist = html.querySelectorAll(
-  //         '.wikitable > tbody > tr > td:nth-child(3)'
-  //       );
-
-  //       let albums = [];
-  //       album.forEach((node, index) => {
-  //         albums.push({
-  //           album: node.textContent,
-  //           artist: artist[index].textContent,
-  //         });
-  //       });
-  //       artist.forEach((node) => console.log(node.textContent));
-  //       setAlbums(albums);
-  //       console.log(albums);
-  //     });
-  // }, []);
-
-  const itemsElements = items.map((item, index) => {
+const Shop = ({
+  shopData,
+  cart,
+  addItem,
+  modalIsOpen,
+  closeModal,
+  handleYearChange,
+  selectedYear,
+}) => {
+  console.log(shopData);
+  const shopElements = shopData.map((item, index) => {
     return (
       <Item
         key={index}
@@ -65,7 +39,6 @@ const Shop = ({ cart, addItem, modalIsOpen, closeModal }) => {
       />
     );
   });
-  console.log(cart);
 
   const cartElements = cart.map((item) => {
     return (
@@ -95,8 +68,8 @@ const Shop = ({ cart, addItem, modalIsOpen, closeModal }) => {
             className="shop__selector"
             name="year-select"
             id="year-select"
-            // onChange={handleChange}
-            // value={exerciseForm}
+            onChange={handleYearChange}
+            value={selectedYear}
           >
             <option>1945</option>
             <option>1946</option>
@@ -178,7 +151,7 @@ const Shop = ({ cart, addItem, modalIsOpen, closeModal }) => {
             <option>2022</option>
           </select>
         </div>
-        <div className="shop__items__flex">{itemsElements}</div>
+        <div className="shop__items__flex">{shopElements}</div>
       </div>
     </div>
   );
