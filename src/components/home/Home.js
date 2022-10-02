@@ -16,7 +16,7 @@ const customStyles = {
   },
 };
 
-const Home = ({ modalIsOpen, closeModal }) => {
+const Home = ({ modalIsOpen, closeModal, cartElements }) => {
   return (
     <div className="home__background">
       <Modal
@@ -25,7 +25,7 @@ const Home = ({ modalIsOpen, closeModal }) => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <ShoppingCart />
+        <ShoppingCart cartItems={cartElements} />
       </Modal>
       <div className="container">
         <div className="hero__text">

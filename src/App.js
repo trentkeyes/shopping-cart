@@ -11,7 +11,7 @@ function App() {
 
   const [shopData, setShopData] = useState(['data', 'more']);
 
-  const [selectedYear, setSelectedYear] = useState('1967');
+  const [selectedYear, setSelectedYear] = useState('1968');
 
   async function getData() {
     let url = `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=List%20of%20Billboard%20200%20number-one%20albums%20of%20${selectedYear}`;
@@ -31,14 +31,18 @@ function App() {
           '.wikitable > tbody > tr > td:nth-child(3)'
         );
         let albums = [];
-        album.forEach((node, index) => {
+        album.forEach((node) => {
           albums.push({
-            id: index,
             album: node.textContent,
             artist: node.parentElement.nextElementSibling.textContent,
           });
         });
-        return albums;
+        const uniqueAlbums = albums.reduce((a, b) => {
+          if (a.indexOf(b) < 0) a.push(b);
+          return a;
+        }, []);
+        console.log(uniqueAlbums);
+        return uniqueAlbums;
       });
   }
 
@@ -81,12 +85,31 @@ function App() {
   function closeModal() {
     setIsOpen(false);
   }
+
+  const cartElements = cart.map((item) => {
+    return (
+      <p>
+        Album {item.id} ({item.quantity})
+      </p>
+    );
+  });
+
   return (
     <div className="App">
       <BrowserRouter>
         <Nav cartQuantity={cartQuantity} openModal={openModal} />
         <Routes>
-          <Route path="/" index element={<Home />} />
+          <Route
+            path="/"
+            index
+            element={
+              <Home
+                modalIsOpen={modalIsOpen}
+                closeModal={closeModal}
+                cartElements={cartElements}
+              />
+            }
+          />
           <Route
             path="/shop"
             element={
@@ -98,6 +121,7 @@ function App() {
                 addItem={addItem}
                 modalIsOpen={modalIsOpen}
                 closeModal={closeModal}
+                cartElements={cartElements}
               />
             }
           />

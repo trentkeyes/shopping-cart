@@ -26,6 +26,7 @@ const Shop = ({
   closeModal,
   handleYearChange,
   selectedYear,
+  cartElements
 }) => {
   console.log(shopData);
   const shopElements = shopData.map((item, index) => {
@@ -37,14 +38,6 @@ const Shop = ({
         artist={item.artist}
         addItem={addItem}
       />
-    );
-  });
-
-  const cartElements = cart.map((item) => {
-    return (
-      <p>
-        Album {item.id} ({item.quantity})
-      </p>
     );
   });
 
