@@ -1,0 +1,98 @@
+export const shopData = [
+  {
+    album: 'Giving You the Best That I Got',
+    artist: 'Anita Baker',
+    art: '/assets/album-art/GivingYoutheBestThatIGot.jpg',
+    price: 9.99,
+  },
+  {
+    album: "Don't Be Cruel",
+    artist: 'Bobby Brown',
+    art: '/assets/album-art/Cruelalbum.jpg',
+    price: 10.99,
+  },
+  {
+    album: 'Appetite for Destruction',
+    artist: "Guns N' Roses",
+    art: '/assets/album-art/GunsnRosesAppetiteforDestructionalbumcover.jpg',
+    price: 12.99,
+  },
+  {
+    album: 'Electric Youth',
+    artist: 'Debbie Gibson',
+    art: '/assets/album-art/Debbie_gibson_electric_youth.jpg',
+    price: 11.99,
+  },
+  {
+    album: 'Lōc-ed After Dark',
+    artist: 'Tone Lōc',
+    art: '/assets/album-art/Tone-Loc_Loc-ed_After_Dark_CD_cover.JPG',
+    price: 10.99,
+  },
+  {
+    album: 'Like a Prayer',
+    artist: 'Madonna',
+    art: '/assets/album-art/Madonna_-_Like_a_Prayer_album.png',
+    price: 12.99,
+  },
+  {
+    album: 'The Raw & the Cooked',
+    artist: 'Fine Young Cannibals',
+    art: '/assets/album-art/The_Raw_and_the_Cooked.jpg',
+    price: 9.99,
+  },
+  {
+    album: 'Batman',
+    artist: 'Prince',
+    art: '/assets/album-art/Prince_-_Batman_(Motion_Picture_Soundtrack).jpg',
+    price: 10.99,
+  },
+  {
+    album: 'Repeat Offender',
+    artist: 'Richard Marx',
+    art: '/assets/album-art/Richard_Marx_-_Repeat_Offender.jpg',
+    price: 9.99,
+  },
+  {
+    album: "Hangin' Tough",
+    artist: 'New Kids on the Block',
+    art: '/assets/album-art/New_Kids_on_the_Block-Hangin_Tough.jpg',
+    price: 11.99,
+  },
+  {
+    album: "Girl You Know It's True",
+    artist: 'Milli Vanilli',
+    art: '/assets/album-art/Milli_Vanilli_Girl_You_Know_Its_True_CD_cover.JPG',
+    price: 1.99,
+  },
+  {
+    album: 'Forever Your Girl',
+    artist: 'Paula Abdul',
+    art: '/assets/album-art/Forever_Your_Girl_-_Paula_Abdul.PNG',
+    price: 11.99,
+  },
+  {
+    album: 'Dr. Feelgood',
+    artist: 'Mötley Crüe',
+    art: '/assets/album-art/Motley_Crue_-_Dr_Feelgood-front.jpg',
+    price: 12.99,
+  },
+  {
+    album: "Janet Jackson's Rhythm Nation 1814",
+    artist: 'Janet Jackson',
+    art: '/assets/album-art/Janet_Jackson_Rhythm_Nation_1814.png',
+    price: 11.99,
+  },
+  {
+    album: 'Storm Front',
+    artist: 'Billy Joel',
+    art: '/assets/album-art/BillyJoel_StormFront.jpg',
+    price: 10.99,
+  },
+  {
+    album: '...But Seriously',
+    artist: 'Phil Collins',
+    art: '/assets/album-art/Phil_Collins-But_Seriously.jpg',
+    price: 9.99,
+  },
+];

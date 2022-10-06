@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import '../../styles/item.css';
-import img from '../../assets/MagicalMysteryTourDoubleEPcover.jpg';
 
-const Item = ({ album, artist, id, addItem }) => {
+const Item = ({ album, artist, art, price, id, addItem }) => {
   const [quantity, setQuantity] = useState(1);
-
   const handleChange = (e) => setQuantity(Number(e.target.value));
-
+  console.log(art);
   return (
     <div className="item__card">
       <div className="item__img">
-        <img src={img} alt="album cover" className="item__img" />
+        <img src={art} alt="album cover" className="item__img" />
       </div>
       <h3>{album}</h3>
       <h3>{artist}</h3>
+      <h3>${price}</h3>
       <div className="item__inputs">
         <input
           type="number"

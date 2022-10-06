@@ -31,10 +31,10 @@ const Home = ({ modalIsOpen, closeModal, cartElements }) => {
         <div className="hero__text">
           <h1 className="hero__title">
             The best records. <br />
-            Of <em>all</em> time.
+            Of 1989.
           </h1>
           <p className="hero__copy">
-            Buy the highest selling albums from every year.
+            Buy the highest selling albums from 1989.
           </p>
           <div className="hero__link">
             <Link to="/shop">Shop now</Link>
