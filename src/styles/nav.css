@@ -2,12 +2,9 @@
     box-sizing: border-box;
 }
 
-
-
 .nav {
     background-color: #3A5A40;
     color: #DAD7CD;
-    min-height: 5vh;
 }
 
 .nav__flex {

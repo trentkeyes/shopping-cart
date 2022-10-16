@@ -4,6 +4,7 @@ import Home from '../src/components/home/Home';
 import Shop from '../src/components/shop/Shop';
 import Nav from '../src/components/Nav';
 import './styles/index.css';
+import './styles/shoppingCart.css';
 import { shopData } from './shopData';
 
 function App() {
@@ -25,14 +26,6 @@ function App() {
     setIsOpen(false);
   }
 
-  const cartElements = cart.map((item) => {
-    return (
-      <p>
-        Album {item.id} ({item.quantity})
-      </p>
-    );
-  });
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -45,7 +38,8 @@ function App() {
               <Home
                 modalIsOpen={modalIsOpen}
                 closeModal={closeModal}
-                cartElements={cartElements}
+                shopData={shopData}
+                cart={cart}
               />
             }
           />
@@ -58,7 +52,6 @@ function App() {
                 addItem={addItem}
                 modalIsOpen={modalIsOpen}
                 closeModal={closeModal}
-                cartElements={cartElements}
               />
             }
           />

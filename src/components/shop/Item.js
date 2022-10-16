@@ -4,7 +4,6 @@ import '../../styles/item.css';
 const Item = ({ album, artist, art, price, id, addItem }) => {
   const [quantity, setQuantity] = useState(1);
   const handleChange = (e) => setQuantity(Number(e.target.value));
-  console.log(art);
   return (
     <div className="item__card">
       <div className="item__img">

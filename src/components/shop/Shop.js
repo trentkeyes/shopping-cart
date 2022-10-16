@@ -48,7 +48,7 @@ const Shop = ({
         style={customStyles}
         contentLabel="Shopping Cart"
       >
-        <ShoppingCart cartItems={cartElements} />
+        <ShoppingCart shopData={shopData} cart={cart} />
       </Modal>
       <div className="container">
         <div className="shop__items__flex">{shopElements}</div>
