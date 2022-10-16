@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import '../styles/nav.css';
 import '../styles/index.css';
 
-const Nav = ({ cartQuantity, openModal }) => {
+const Nav = ({ cartQuantity, openModal, isActive }) => {
   return (
     <nav className="nav">
       <div className="container nav__flex">
@@ -11,10 +11,10 @@ const Nav = ({ cartQuantity, openModal }) => {
         <ul className="nav__links">
           <li>
             <NavLink
-              to="/"
-              className={(isActive) => {
-                return 'nav__link' + (isActive ? ' selected' : '');
-              }}
+              to="/home"
+              exact
+              activeClassName="active"
+              className="nav__link"
             >
               Home
             </NavLink>
@@ -22,9 +22,9 @@ const Nav = ({ cartQuantity, openModal }) => {
           <li>
             <NavLink
               to="/shop"
-              className={(isActive) => {
-                return 'nav__link' + (isActive ? ' selected' : '');
-              }}
+              className="nav__link"
+              exact
+              activeClassName="active"
             >
               Shop
             </NavLink>

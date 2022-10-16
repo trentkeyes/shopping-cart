@@ -7,6 +7,8 @@
     color: #DAD7CD;
 }
 
+
+
 .nav__flex {
     display: flex;
     justify-content: space-between;
@@ -30,6 +32,12 @@
     font-size: 1.125rem;
     font-weight: 500;
     padding: .25em;
+    background-color: #DAD7CD;
+    border: .25rem solid #3A5A40;
+}
+
+.active {
+    border: .25rem solid black;
 }
 
 .nav__link:hover {

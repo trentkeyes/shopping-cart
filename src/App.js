@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from '../src/components/home/Home';
 import Shop from '../src/components/shop/Shop';
 import Nav from '../src/components/Nav';
@@ -31,9 +31,9 @@ function App() {
       <BrowserRouter>
         <Nav cartQuantity={cartQuantity} openModal={openModal} />
         <Routes>
+          <Route path="/" index element={<Navigate to="/home" replace />} />
           <Route
-            path="/"
-            index
+            path="/home"
             element={
               <Home
                 modalIsOpen={modalIsOpen}

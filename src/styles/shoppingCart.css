@@ -1,5 +1,7 @@
 .shopping-cart {
     padding: 2rem;
+    background-color: #3A5A40;
+    color: #DAD7CD;
 }
 
 .shopping-cart__text-right {

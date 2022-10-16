@@ -18,9 +18,9 @@ export const ShoppingCart = ({ shopData, cart }) => {
   });
 
   return (
-    <div>
+    <div className="shopping-cart">
       {cart.length > 0 ? (
-        <div className="shopping-cart">
+        <div>
           <div>{cartElements}</div>
           <p>Total</p>
         </div>
