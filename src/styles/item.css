@@ -20,6 +20,7 @@
     border: 1px solid #344E41;
     text-align: center;
     width: 3.5em;
+    cursor: pointer;
 }
 
 .item__add {

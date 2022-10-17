@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import '../styles/nav.css';
 import '../styles/index.css';
 
-const Nav = ({ cartQuantity, openModal, isActive }) => {
+const Nav = ({ cartQuantity, openModal }) => {
   return (
     <nav className="nav">
       <div className="container nav__flex">
@@ -37,11 +37,11 @@ const Nav = ({ cartQuantity, openModal, isActive }) => {
               />
             </div>
           </li>
-          {cartQuantity && (
-            <li className="nav__cart-items">
+          <li className="nav__cart-items">
+            {cartQuantity && (
               <div className="nav__cart-items-background">{cartQuantity}</div>
-            </li>
-          )}
+            )}
+          </li>
         </ul>
       </div>
     </nav>

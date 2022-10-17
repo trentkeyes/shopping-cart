@@ -1,9 +1,18 @@
+.shopping-cart p {
+    margin: .5rem;
+}
+
 .shopping-cart {
-    padding: 2rem;
     background-color: #3A5A40;
     color: #DAD7CD;
 }
 
-.shopping-cart__text-right {
-    text-align: right;
+.shopping-cart__flex {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.shopping-cart__push-right {
+    margin-left: auto;
 }
