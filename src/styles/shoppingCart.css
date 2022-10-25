@@ -1,18 +1,32 @@
 .shopping-cart p {
-    margin: .5rem;
+    margin: .75rem;
 }
 
 .shopping-cart {
     background-color: #3A5A40;
     color: #DAD7CD;
+    font-weight: 600;
 }
 
 .shopping-cart__flex {
     display: flex;
+    justify-content: space-between;
     gap: 1rem;
+    font-size: 1.25rem;
 
 }
 
 .shopping-cart__push-right {
     margin-left: auto;
+
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.shopping-cart__total {
+    background-color: #DAD7CD;
+    color: black;
+    font-weight: 700;
 }

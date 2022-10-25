@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Item from './Item';
 import { ShoppingCart } from './ShoppingCart';
 import '../../styles/shop.css';
@@ -15,19 +13,11 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: '#3A5A40',
-    color: '#DAD7CD'
+    color: '#DAD7CD',
   },
 };
 
-const Shop = ({
-  shopData,
-  cart,
-  addItem,
-  modalIsOpen,
-  closeModal,
-  cartElements,
-}) => {
-  console.log(shopData);
+const Shop = ({ shopData, cart, addItem, modalIsOpen, closeModal }) => {
   const shopElements = shopData.map((item, index) => {
     return (
       <Item

@@ -9,22 +9,25 @@ export const ShoppingCart = ({ shopData, cart }) => {
     return (
       <div>
         <div className="shopping-cart__flex">
-          <p>{album.album}</p>
+          <p>
+            {album.album} <span>({album.artist})</span>
+          </p>
           <p className="shopping-cart__push-right">
-            ({item.quantity}) ${item.quantity * album.price}
+            ({item.quantity})$
+            <span className="underline">{item.quantity * album.price}</span>
           </p>
         </div>
-        <p>{album.artist}</p>
       </div>
     );
   });
 
   const totals = cart.reduce(
-    (prev, current, index) => {
-      console.log('prev', prev, 'current', current);
+    (acc, current, index) => {
+      console.log('acc', acc, 'current', current);
+      console.log('album', current.id);
       return {
-        quantity: prev.quantity + current.quantity,
-        price: prev.price + current.quantity * shopData[index].price,
+        quantity: acc.quantity + current.quantity,
+        price: acc.price + current.quantity * shopData[current.id].price,
       };
     },
     { quantity: 0, price: 0 }
@@ -37,10 +40,11 @@ export const ShoppingCart = ({ shopData, cart }) => {
       {cart.length > 0 ? (
         <div className="shopping-cart">
           <div>{cartElements}</div>
-          <div className="shopping-cart__flex">
-            <p>Total</p>
+          <div className="shopping-cart__flex shopping-cart__total">
+            <p className="">Total</p>
             <p className="shopping-cart__push-right">
-              ({totals.quantity}){totals.price}
+              ({totals.quantity})$
+              <span className="underline">{totals.price}</span>
             </p>
           </div>
         </div>
