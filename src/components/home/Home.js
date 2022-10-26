@@ -26,6 +26,7 @@ const Home = ({ modalIsOpen, closeModal, shopData, cart }) => {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
+        appElement={document.getElementById('app')}
       >
         <ShoppingCart shopData={shopData} cart={cart} />
       </Modal>

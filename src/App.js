@@ -27,7 +27,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" id="app">
       <BrowserRouter>
         <Nav cartQuantity={cartQuantity} openModal={openModal} />
         <Routes>

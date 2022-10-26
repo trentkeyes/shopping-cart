@@ -2,12 +2,10 @@ import React from 'react';
 import '../../styles/shoppingCart.css';
 
 export const ShoppingCart = ({ shopData, cart }) => {
-  console.log(shopData, cart);
-
-  const cartElements = cart.map((item) => {
+  const cartElements = cart.map((item, index) => {
     const album = shopData[item.id];
     return (
-      <div>
+      <div key={index}>
         <div className="shopping-cart__flex">
           <p>
             {album.album} <span>({album.artist})</span>
@@ -23,8 +21,6 @@ export const ShoppingCart = ({ shopData, cart }) => {
 
   const totals = cart.reduce(
     (acc, current, index) => {
-      console.log('acc', acc, 'current', current);
-      console.log('album', current.id);
       return {
         quantity: acc.quantity + current.quantity,
         price: acc.price + current.quantity * shopData[current.id].price,
@@ -32,9 +28,6 @@ export const ShoppingCart = ({ shopData, cart }) => {
     },
     { quantity: 0, price: 0 }
   );
-
-  console.log(totals);
-
   return (
     <div>
       {cart.length > 0 ? (

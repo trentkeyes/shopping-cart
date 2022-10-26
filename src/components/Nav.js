@@ -12,8 +12,8 @@ const Nav = ({ cartQuantity, openModal }) => {
           <li>
             <NavLink
               to="/home"
-              exact
-              activeClassName="active"
+              exact="true"
+              activeclassname="active"
               className="nav__link"
             >
               Home
@@ -23,8 +23,8 @@ const Nav = ({ cartQuantity, openModal }) => {
             <NavLink
               to="/shop"
               className="nav__link"
-              exact
-              activeClassName="active"
+              exact="true"
+              activeclassname="active"
             >
               Shop
             </NavLink>

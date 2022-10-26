@@ -39,6 +39,7 @@ const Shop = ({ shopData, cart, addItem, modalIsOpen, closeModal }) => {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Shopping Cart"
+        appElement={document.getElementById('app')}
       >
         <ShoppingCart shopData={shopData} cart={cart} />
       </Modal>
