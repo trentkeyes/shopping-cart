@@ -32,7 +32,9 @@ const Nav = ({ cartQuantity, openModal }) => {
           <li>
             <div className="nav__cart" onClick={openModal}>
               <img
-                src={'/assets/shopping_cart_FILL0_wght400_GRAD0_opsz48.svg'}
+                src={
+                  '/shopping-cart/assets/shopping_cart_FILL0_wght400_GRAD0_opsz48.svg'
+                }
                 alt="Shopping cart icon"
               />
             </div>

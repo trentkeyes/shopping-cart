@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import {
+  BrowserRouter,
+  HashRouter,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import Home from '../src/components/home/Home';
 import Shop from '../src/components/shop/Shop';
 import Nav from '../src/components/Nav';
@@ -28,7 +34,7 @@ function App() {
 
   return (
     <div className="App" id="app">
-      <BrowserRouter>
+      <HashRouter>
         <Nav cartQuantity={cartQuantity} openModal={openModal} />
         <Routes>
           <Route path="/" index element={<Navigate to="/home" replace />} />
@@ -56,7 +62,7 @@ function App() {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

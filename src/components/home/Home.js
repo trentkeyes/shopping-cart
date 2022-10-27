@@ -4,19 +4,7 @@ import Modal from 'react-modal';
 import { ShoppingCart } from '../shop/ShoppingCart';
 import '../../styles/index.css';
 import '../../styles/home.css';
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    backgroundColor: '#3A5A40',
-    color: '#DAD7CD',
-  },
-};
+import modalStyles from '../../styles/modalStyles';
 
 const Home = ({ modalIsOpen, closeModal, shopData, cart }) => {
   return (
@@ -24,7 +12,7 @@ const Home = ({ modalIsOpen, closeModal, shopData, cart }) => {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        style={customStyles}
+        style={modalStyles}
         contentLabel="Example Modal"
         appElement={document.getElementById('app')}
       >
