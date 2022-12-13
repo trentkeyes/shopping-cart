@@ -5,7 +5,7 @@ const Item = ({ album, artist, art, price, id, addItem }) => {
   const [quantity, setQuantity] = useState(1);
   const handleChange = (e) => setQuantity(Number(e.target.value));
   return (
-    <div className="item__card">
+    <li className="item__card item">
       <div className="item__img">
         <img src={art} alt="album cover" className="item__img" />
       </div>
@@ -25,7 +25,7 @@ const Item = ({ album, artist, art, price, id, addItem }) => {
           Add to Cart
         </button>
       </div>
-    </div>
+    </li>
   );
 };
 

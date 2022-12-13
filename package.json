@@ -6,7 +6,6 @@
   "dependencies": {
     "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
-    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "axios": "^0.27.2",
     "cheerio": "^1.0.0-rc.12",
@@ -48,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/user-event": "^14.4.3",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",

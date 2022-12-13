@@ -29,9 +29,18 @@ const Shop = ({ shopData, cart, addItem, modalIsOpen, closeModal }) => {
         contentLabel="Shopping Cart"
         appElement={document.getElementById('app')}
       >
-        <ShoppingCart shopData={shopData} cart={cart} />
+        <ShoppingCart cart={cart} />
       </Modal>
       <div className="container">
+        <button>
+          {' '}
+          <img
+            src={
+              '/shopping-cart/assets/shopping_cart_FILL0_wght400_GRAD0_opsz48.svg'
+            }
+            alt="cart"
+          />
+        </button>
         <div className="shop__items__flex">{shopElements}</div>
       </div>
     </div>

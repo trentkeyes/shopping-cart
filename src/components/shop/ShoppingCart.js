@@ -1,9 +1,11 @@
 import React from 'react';
 import '../../styles/shoppingCart.css';
 
-export const ShoppingCart = ({ shopData, cart }) => {
-  const cartElements = cart.map((item, index) => {
-    const album = shopData[item.id];
+export const ShoppingCart = ({ cart }) => {
+  const cartArr = Object.values(cart);
+
+  const cartElements = cartArr.map((item, index) => {
+    const album = item.info;
     return (
       <div key={index}>
         <div className="shopping-cart__flex">
@@ -11,33 +13,36 @@ export const ShoppingCart = ({ shopData, cart }) => {
             {album.album} <span>({album.artist})</span>
           </p>
           <p className="shopping-cart__push-right">
-            ({item.quantity})$
-            <span className="underline">{item.quantity * album.price}</span>
+            ({item.quantity})
+            <span className="underline">${item.quantity * album.price}</span>
           </p>
         </div>
       </div>
     );
   });
 
-  const totals = cart.reduce(
-    (acc, current, index) => {
+  const totals = cartArr.reduce(
+    (acc, current) => {
+      const item = current.info;
+      const quant = current.quantity;
+      console.log(item);
       return {
-        quantity: acc.quantity + current.quantity,
-        price: acc.price + current.quantity * shopData[current.id].price,
+        quantity: acc.quantity + quant,
+        price: acc.price + quant * item.price,
       };
     },
     { quantity: 0, price: 0 }
   );
   return (
     <div>
-      {cart.length > 0 ? (
+      {cartArr.length > 0 ? (
         <div className="shopping-cart">
           <div>{cartElements}</div>
           <div className="shopping-cart__flex shopping-cart__total">
             <p className="">Total</p>
             <p className="shopping-cart__push-right">
-              ({totals.quantity})$
-              <span className="underline">{totals.price}</span>
+              <span>({totals.quantity})</span>
+              <span className="underline"> ${totals.price}</span>
             </p>
           </div>
         </div>
