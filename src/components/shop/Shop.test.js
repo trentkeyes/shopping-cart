@@ -31,24 +31,3 @@ describe('Shop', () => {
   });
 });
 
-// it('renders the shopping cart modal when the cart button is clicked', () => {
-//   const { getByRole, queryByRole } = render(
-//     <Shop shopData={mockShopData} cart={{}} />
-//   );
-//   const cartButton = getByRole('button', { name: 'cart' });
-//   const openModal = jest.fn()
-//   console.log(cartButton);
-//   fireEvent.click(cartButton);
-//   const shoppingCart = queryByRole('button', {name: 'cart'});
-//   expect(shoppingCart).toBeInTheDocument();
-//   expect(openModal).toHaveBeenCalledTimes(1)
-// it('renders the shopping cart modal when the cart button is clicked', () => {
-  //     const { getByTestId, queryByTestId } = render(
-  //       <Shop shopData={mockShopData} cart={[]} />
-  //     );
-  //     const cartButton = getByTestId('cart-button');
-  //     fireEvent.click(cartButton);
-  //     const shoppingCart = queryByTestId('shopping-cart-modal');
-  //     expect(shoppingCart).toBeInTheDocument();
-  //   });
-// });
