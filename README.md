@@ -26,4 +26,4 @@ Simple shop app where users can add items to a shopping cart and see a price tot
 
 ### Screenshot
 
-![Shopping cart app screenshot](public\assets\shopping cart screenshot.png)
+![Shopping cart app screenshot](/public/assets/shopping%20cart%20screenshot.png)
