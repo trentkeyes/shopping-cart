@@ -28,7 +28,7 @@ export const ShoppingCart = ({ cart }) => {
       console.log(item);
       return {
         quantity: acc.quantity + quant,
-        price: acc.price + quant * item.price,
+        price: Math.round(acc.price + quant * item.price),
       };
     },
     { quantity: 0, price: 0 }
